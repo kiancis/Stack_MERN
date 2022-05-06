@@ -21,6 +21,11 @@ const TRAILER_SCHEMA = new mongoose.Schema({
         required: true,
         trim: true
     },
+    description: {
+        type: String,
+        required: true,
+        trim: true
+    },
     cover: {
         type: String,
         public_id: String,

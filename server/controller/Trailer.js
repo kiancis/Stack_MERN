@@ -11,13 +11,14 @@ export const getTrailers = async (req, res) => {
 
 export const createTrailer = async (req, res) => {
   try {
-    const { title, director, review, actors, Data, cover } = req.body;
+    const { title, director, review, actors, Data, description, cover } = req.body;
     const newTrailer = new trailerModel({
       title,
       director,
       review,
       actors,
       Data,
+      description,
       cover,
     });
     await newTrailer.save();
